@@ -1,0 +1,766 @@
+/*  LES 2 GOOGLE FONTS  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500&display=swap');
+
+/* LES VARIABLES CSS*/
+:root {
+    --primary: #b6593a;
+    --secondary: #1e333c;
+    --dark: #0a0a3d;
+    --light: #f8f9fa;
+    --brown: #e4d5ac;
+    --text-color: #333333;
+
+    --font-title: 'Poppins', sans-serif;
+    --font-text: 'Roboto', sans-serif;
+
+    --padding: 60px;
+    --margin: 20px;
+    --radius: 12px;
+}
+
+/* RESET CSS ET STYLES DE BASE  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-text);
+    background-color: var(--light);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-top: 80px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-title);
+    color: var(--dark);
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: calc(var(--margin) * 2);
+}
+
+/* LES LIENS  */
+
+.navbar-dark .navbar-nav .nav-link {
+    margin-left: 15px;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    box-shadow: none;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Structure globale des sections */
+.section-padding {
+    padding: var(--padding) 8%;
+}
+
+.bg-section-alt {
+    background-color: var(--brown);
+}
+
+/* 
+   SECTION HERO */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 140px 8% 60px 8%;
+
+    min-height: 100vh;
+    width: 100%;
+
+    position: relative;
+    margin-top: -80px;
+    z-index: 1;
+
+    background-image: linear-gradient(90deg, rgba(15, 23, 42, 0.95) 35%, rgba(15, 23, 42, 0.6) 65%, rgba(0, 0, 0, 0) 100%),
+        url('../Images/Accueil.png');
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+.carre {
+    max-width: 650px;
+}
+
+/* Le petit texte d'introduction */
+.hero-subtitle {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* Le gros titre fluide */
+.carre h1 {
+    font-family: var(--font-title);
+    font-size: clamp(2.5rem, 4.5vw, 3.8rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: #ffffff;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #ffffff, var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.carre p.hero-lead {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 25px;
+}
+
+/* La liste à puces moderne */
+.hero-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 35px;
+}
+
+.hero-list li {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+/* Les puces rondes de couleur orange */
+.hero-list li::before {
+    content: "●";
+    color: var(--primary);
+    font-size: 0.8rem;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+/* Positionnement des boutons */
+.hero-button {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Style des deux boutons */
+.button-primary,
+.button-second {
+    display: inline-block;
+    padding: 14px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 2px solid var(--primary);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.button-second {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
+/* Effets au survol */
+.button-primary:hover {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    transform: translateY(-3px);
+}
+
+.button-second:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(182, 89, 58, 0.3);
+}
+
+/* SECTION COMMUNE*/
+.barbacue,
+.awa {
+
+    background-image: linear-gradient(90deg, rgba(15, 23, 42, 0.95) 35%, rgba(15, 23, 42, 0.6) 65%, rgba(0, 0, 0, 0) 100%),
+        url('../Images/zer.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.barbacue {
+    min-height: auto;
+    padding: 60px 8%;
+
+}
+
+/* GRILLE BENTO */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 3rem 0;
+    color: var(--primary);
+}
+
+
+.bento-grid .card,
+.grid .card {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px 15px;
+    background: var(--secondary);
+    color: var(--primary);
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+@media (min-width: 992px) {
+    .bento-grid .card:nth-child(1) {
+        grid-column: span 2;
+        background-color: var(--secondary);
+        color: var(--primary);
+    }
+
+    .bento-grid .card:nth-child(4) {
+        grid-column: span 2;
+        border-left: 6px solid var(--primary);
+    }
+}
+
+/* Version mobile pour le Bento */
+@media (max-width: 991px) {
+    .bento-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+
+    .barbacue,
+    .awa {
+        background-attachment: scroll;
+    }
+}
+
+/*ET EFFETS HOVER*/
+
+.titre-categories {
+    color: #b6593a;
+    font-weight: 600;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+}
+
+/* CAROUSEL */
+.carousel-sans-js .carousel-inner {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.carousel-sans-js .carousel-inner::-webkit-scrollbar {
+    display: none;
+}
+
+.bento-grid .card:hover,
+.carousel-sans-js .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-sans-js .carousel-item {
+    display: block;
+    margin-right: 0;
+    flex: 0 0 100%;
+    width: 100%;
+    scroll-snap-align: start;
+    padding: 0 15px;
+}
+
+.carousel-indicators-css {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dot-indicator {
+    width: 30px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.dot-indicator:hover,
+.dot-indicator:focus {
+    background-color: var(--primary);
+    outline: none;
+}
+
+/*SECTION TÉMOIGNAGES */
+.awa {
+    padding: 60px 8% 80px 8%;
+    text-align: center;
+}
+
+.awa h2 {
+    color: var(--primary);
+    margin-bottom: 30px;
+}
+
+.awa .card {
+    border-left: 6px solid var(--primary);
+    border-right: 6px solid var(--primary);
+    font-style: italic;
+    background-color: transparent;
+    color: var(--primary);
+    padding: 30px;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* FREELANCES */
+
+/* --- CARTES CUSTOM --- */
+.custom-card {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    height: 100%;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.custom-card .card-img-top {
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+    object-position: top center;
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+/* --- BOUTON AFRITALENT --- */
+.btn-afritalent {
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50px;
+    padding: 8px 15px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-afritalent:hover {
+    background-color: var(--dark);
+    color: white;
+    transform: scale(1.03);
+}
+
+/* --- SECTION DE FOND --- */
+.momo {
+    background-image: linear-gradient(90deg, rgba(15, 23, 42, 0.95) 35%, rgba(15, 23, 42, 0.6) 65%, rgba(0, 0, 0, 0) 100%),
+        url('../Images/freelance.png');
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 140px 8% 60px 8%;
+
+    min-height: 100vh;
+    width: 100%;
+
+    position: relative;
+    margin-top: -80px;
+    z-index: 1;
+    background-size: 100% 100%;
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+/* RESPONSIVITE */
+
+/* ==========================================================================
+   1. EXCLUSIF PETITS MOBILES (Cible : Écrans étroits de 357px à 375px)
+   ========================================================================== */
+@media (max-width: 400px) {
+
+    /* Évite que la grille Bento ne tente de faire plusieurs colonnes */
+    .bento-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    /* Le correctif pour tes images de fond (.barbacue et .awa) */
+    .barbacue,
+    .awa {
+        min-height: 180px !important;
+        /* Hauteur basse adaptée pour éviter le zoom moche */
+        background-size: cover !important;
+        /* L'image s'adapte sans se déformer */
+        background-position: center !important;
+        /* Reste bien centrée */
+        padding: 25px 15px !important;
+        /* Réduit l'espace pour que le texte ne pousse pas l'image */
+    }
+
+    /* Réduit la taille des gros titres pour qu'ils ne dépassent pas de l'écran */
+    .barbacue h1,
+    .awa h1,
+    .hero h1 {
+        font-size: 1.3rem !important;
+    }
+}
+
+/* ==========================================================================
+   2. SMARTPHONES STANDARDS (Jusqu'à 576px)
+   ========================================================================== */
+@media (max-width: 576px) {
+    body {
+        padding-top: 70px;
+        /* Un peu moins de padding haut sur mobile */
+    }
+
+    .momo,
+    .hero {
+        padding: 100px 4% 40px 4%;
+    }
+
+    .hero-button {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* ==========================================================================
+   3. TOUS LES MOBILES & TABLETTES (Jusqu'à 991px)
+   ========================================================================== */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: var(--secondary);
+        padding: 20px;
+        border-radius: var(--radius);
+        margin-top: 10px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        margin-left: 0;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    /* Sécurité pour que les images défilent bien sur les téléphones */
+    .barbacue,
+    .awa {
+        background-attachment: scroll;
+    }
+}
+
+/* ==========================================================================
+   4. TABLETTES EN MODE PAYSAGE (Entre 768px et 991px)
+   ========================================================================== */
+@media (min-width: 768px) and (max-width: 991px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==========================================================================
+   5. ÉCRANS D'ORDINATEURS (À partir de 992px)
+   ========================================================================== */
+@media (min-width: 992px) {
+    .bento-grid .card:nth-child(1) {
+        grid-column: span 2;
+        background-color: var(--secondary);
+        color: #ffffff;
+        /* Corrigé : texte blanc pour contrer le fond sombre */
+    }
+
+    .bento-grid .card:nth-child(4) {
+        grid-column: span 2;
+        border-left: 6px solid var(--primary);
+    }
+}
+
+/* ==========================================================================
+   6. GRANDS ÉCRANS (À partir de 1200px)
+   ========================================================================== */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* style pour faq */
+.accordion-item {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(182, 89, 58, 0.1);
+    color: var(--primary);
+}
+
+#mariam,
+#tarif-pro,
+#tarif-entreprise {
+    background-color: var(--secondary);
+    color: var(--light);
+}
+
+/*STYLE DARK MODE  */
+
+body {
+    transition: background-color 0.4s ease;
+}
+
+
+body.dark {
+    background-color: #000000;
+}
+
+body.dark header~*,
+body.dark section,
+body.dark .hero,
+body.dark footer {
+    filter: brightness(0.6);
+    transition: filter 0.4s ease;
+}
+
+.nav-link {
+    color: #ffffff;
+}
+
+
+/* STYLE POUR LE SCROLL */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.navbar-custom-scroll {
+    background-color: var(--secondary);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ACCESSOIRES (Bouton Retour en haut & Bouton Mode) */
+
+#btnRetour {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+/* FADE IN */
+
+
+.section-cachee {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section-cachee.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/*COMPTEURS DE STATISTIQUES */
+.hero {
+
+    padding: 140px 8% 80px 8%;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 35px;
+}
+
+
+.compteur {
+    font-family: var(--font-title);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 900;
+    color: var(--primary);
+    margin: 0;
+    line-height: 1;
+}
+
+.stat-item p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/*Animation de fond 3D avec Three.js */
+#fond-3d-three {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    background-color: #0a0a3d;
+}
+
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(4px);
+}
+
+#fond-3d-about {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    background-color: #0a0a3d;
+}
+
+#fond-3d-contact {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    background-color: #0a0a3d;
+}
+
+/* couleur pour les titres des freelances et les titres de sections */
+.titre {
+    color: var(--primary);
+
+}
+
+/* FOOTER */
+footer {
+    padding: 50px 8% 30px 8%;
+    background-color: var(--secondary);
+    border-top: 3px solid var(--primary);
+    color: rgba(255, 255, 255, 0.8);
+    /* Applique la couleur claire à tout le texte */
+}
+
+/* Style de tous les paragraphes du footer */
+footer p,
+footer span {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0;
+}
+
+/* Style des titres de colonnes */
+footer h5 {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Gestion propre de tous les liens pour éviter les conflits Bootstrap */
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Effet au survol : les liens s'allument en blanc */
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+/* Bordure de séparation du bas personnalisée */
+.footer-bottom.border-top {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Centrage propre sur mobile */
+@media (max-width: 767px) {
+    footer {
+        text-align: center;
+    }
+
+    .footer-links .me-3 {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
