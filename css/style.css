@@ -95,7 +95,7 @@ h2 {
     z-index: 1;
 
     background-image: linear-gradient(90deg, rgba(15, 23, 42, 0.95) 35%, rgba(15, 23, 42, 0.6) 65%, rgba(0, 0, 0, 0) 100%),
-        url('../Images/Accueil.png');
+        url('../images/Accueil.png');
     background-size: cover;
     background-position: center right;
     background-repeat: no-repeat;
@@ -216,7 +216,7 @@ h2 {
 .awa {
 
     background-image: linear-gradient(90deg, rgba(15, 23, 42, 0.95) 35%, rgba(15, 23, 42, 0.6) 65%, rgba(0, 0, 0, 0) 100%),
-        url('../Images/zer.jpeg');
+        url('../images/zer.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -414,7 +414,7 @@ h2 {
 /* --- SECTION DE FOND --- */
 .momo {
     background-image: linear-gradient(90deg, rgba(15, 23, 42, 0.95) 35%, rgba(15, 23, 42, 0.6) 65%, rgba(0, 0, 0, 0) 100%),
-        url('../Images/freelance.png');
+        url('../images/freelance.png');
 
     display: flex;
     align-items: center;
